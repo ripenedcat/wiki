@@ -13,6 +13,7 @@ public class WikiApplication {
         SpringApplication app = new SpringApplication(WikiApplication.class);
         Environment env = app.run(args).getEnvironment();
         LOG.info("System Run Successfully!!!");
+        //env.getProperty可以读取application.properties中的配置
         LOG.info("Address: http://127.0.0.1:{}",env.getProperty("server.port"));
     }
 
